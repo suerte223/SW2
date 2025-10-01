@@ -1,0 +1,144 @@
+/* 기본 스타일 초기화 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 전체 컨테이너 스타일 */
+.signup-container {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e0f2ff; /* 연한 파란색 배경 */
+  position: relative;
+  overflow: hidden;
+}
+
+/* 배경의 발바닥 무늬 스타일 */
+.signup-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/회원가입.png");
+  background-size: 110%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+/* 왼쪽 텍스트 컨테이너 */
+.main-content {
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  z-index: 1;
+}
+
+.logo-text {
+  font-family: '온글잎 공부잘하자나';
+  font-size: 200px;
+  font-weight: lighter;
+  color: #2A2929;
+  margin-bottom: 10px;
+}
+
+.sub-text {
+  font-family: '온글잎 공부잘하자나';
+  font-size: 200px;
+  font-weight: lighter;
+  color: #FFFFFF;
+  margin-left: 200px;
+}
+
+/* 오른쪽 회원가입 폼 컨테이너 */
+.form-container {
+  background-color: rgba(255,255,255,0.88);
+  padding: 40px;
+  border-radius: 11px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 532px;
+  height: 579px;
+  width: 100%;
+  z-index: 1;
+  margin-left: 80px;
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+/* 입력 그룹 스타일 */
+.input-group {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 32px;
+  width: 387px;
+  height: 45px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 16px;
+  color: rgb(0,0,0,0.6);
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid rgba(0,0,0,0.2);
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #88c2f5;
+  box-shadow: 0 0 5px rgba(136, 194, 245, 0.5);
+}
+
+/* Sign In 버튼 스타일 */
+.sign-in-button {
+  width: 387px;
+  height: 55px;
+  padding: 12px;
+  background-color: #A9C7F2; /* 버튼 색상 */
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.8s ease;
+  margin-top: 20px;
+}
+
+.sign-in-button:hover {
+  background-color: #88c2f5;
+}
+
+/* 회원가입 제목 글자색 수정 */
+.form-title {
+    color: #333;
+}
+
+/* 적용할 곳에서 사용한 이름 */
+.logo-text {
+  font-family: '온글잎 공부잘하자나', sans-serif; /* 오타 없이 정확히 입력 */
+}
+
+/* 폰트 변경 */
+@font-face {
+  font-family: '온글잎 공부잘하자나'; /* 사용할 폰트 이름 지정 */
+  src: url('../src/온글잎 공부잘하자나.ttf') format('truetype'); /* 폰트 파일 경로 지정 */
+  font-weight: normal; /* 폰트 굵기 */
+  font-style: normal; /* 폰트 스타일 */
+}
