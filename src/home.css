@@ -1,0 +1,173 @@
+.nav-inner{
+  max-width:1670px; 
+  margin:20 auto;
+  height:120px;
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between;
+  padding: 20px;
+  }
+.brand{ display:flex; align-items:center; gap:10px; }
+.paw{ width:105px; height:105px; }
+.brand-text {
+  font-family: '온글잎 공부잘하자나';
+  font-size: 100px;
+  font-weight: lighter;
+  color: #2A2929;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  letter-spacing:.2px;
+}
+
+.menu a{
+  margin-left:28px; 
+  text-decoration:none; 
+  color:#6b7280; 
+  font-size:24px;
+}
+.menu a:hover{ color:#5D5D5D; }
+
+.menulink a{
+    align:right;
+    margin-left:28px; 
+    text-decoration:none; 
+    color:#6b7280; 
+    font-size:24px;
+}
+.menulink a:hover{ color:#5D5D5D; }
+.title{
+  margin:0 0 32px;
+  font-size:60px; 
+  line-height:1.2; 
+  font-weight:800; 
+  color:#0f172a;
+}
+.subtitle{
+  margin:0 auto 32px;
+  max-width:640px;
+  color:var(--muted);
+  font-size:20px;
+}
+.cta{
+  width: 343px;
+  height: 74px;
+  display:inline-block;
+  padding:16px 28px;
+  border-radius: 999px;
+  text-decoration:none;
+  background: rgba(169,199,242,0.4);
+  color: #036CFF;
+  font-size: 30px;
+}
+
+.hero {
+  flex: 1; 
+  max-width: 960px;
+  height: 500px;
+  margin: 200px auto 140px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* 푸터 */
+.footer {
+  background: #FFFFFF;
+  border-top: 1px solid #FFFFFF;
+}
+.footer-inner{
+  max-width:1670px; margin:0 auto; padding: 22px 20px 22px;
+}
+.logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; 
+  gap: 30px; 
+  margin-bottom: 12px;
+}
+
+.kojjok{ height:36px; }
+
+
+.grid {
+  display: flex;          /* flex row */
+  justify-content: center; /* 양 끝까지 고르게 배치 */
+  align-items: flex-start;
+  gap: 40px;              /* 열 간격 */
+}
+
+.grid .col {
+  flex: 1;                /* 각 col이 동일 비율 */
+  min-width: 120px;       /* 너무 좁아지지 않게 최소 너비 */
+  font-size: 10px;
+  text-align: center;
+}
+
+.github-icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.react-icon {
+  width: 34px;
+  height: 30px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.django-icon {
+  width: 45px;
+  height: 45px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+@media (max-width: 960px){
+.title{ font-size:36px; }
+.grid{ grid-template-columns: 1fr 1fr; }
+}
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* 적용할 곳에서 사용한 이름 */
+.logo-text {
+  font-family: '온글잎 공부잘하자나', sans-serif; /* 오타 없이 정확히 입력 */
+}
+
+.logo-stack {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+
+.paw-bg {
+  position: absolute;
+  left: -22px;   /* 원하는 만큼 이동 */
+  top: -18px;
+  width: 90px;   /* 크기 조절 */
+  z-index: 0;
+  pointer-events: none;
+}
+
+.wordmark {
+  position: relative;
+  z-index: 1;
+  font-weight: 900;
+  font-size: 55px;  
+  color: #000;
+  letter-spacing: .5px;
+  font-family: '온글잎 공부잘하자나', sans-serif;
+}
+
+/* 폰트 변경 */
+@font-face {
+  font-family: '온글잎 공부잘하자나'; /* 사용할 폰트 이름 지정 */
+  src: url('../src/온글잎 공부잘하자나.ttf') format('truetype'); /* 폰트 파일 경로 지정 */
+  font-weight: normal; /* 폰트 굵기 */
+  font-style: normal; /* 폰트 스타일 */
+}

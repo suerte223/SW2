@@ -1,13 +1,17 @@
-import React from 'react';
-import Signup from './signup'; // Signup 컴포넌트를 불러옵니다.
-import './App.css'; // App.css도 그대로 사용합니다.
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Home from './home';
+import Signin from './signin';
+import Signup from './signup';
 
-function App() {
+export default function App(){
   return (
-    <div className="App">
-      <Signup />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
