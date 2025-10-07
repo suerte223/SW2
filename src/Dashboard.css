@@ -1,0 +1,157 @@
+/* 기본 레이아웃 (sticky footer) */
+html, body, #root { height: 100%; }
+body { margin: 0; background: #fff; color: #0f172a; font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif; }
+.app { min-height: 100vh; display: flex; flex-direction: column; }
+.main { flex: 1; }
+
+/* 헤더 */
+.home {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.paw {
+  width: 105px;
+  height: 105px;
+}
+
+.brand-text {
+  font-family: '온글잎 공부잘하자나';
+  font-size: 100px;
+  font-weight: lighter;
+  color: #2A2929;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  letter-spacing: .2px;
+}
+
+.menu a {
+  margin-left: 28px;
+  text-decoration: none;
+  color: #6b7280;
+  font-size: 24px;
+}
+
+.menu a:hover {
+  color: #5D5D5D;
+}
+
+.menulink a {
+  margin-right: 30px;
+  margin-left: 28px;
+  text-decoration: none;
+  color: #6b7280;
+  font-size: 24px;
+}
+
+.menulink a:hover {
+  color: #5D5D5D;
+}
+
+
+/* 공통 섹션 */
+.section { max-width:1200px; margin:0 auto; padding:24px; }
+.section--intro { padding-top:32px; }
+.section__title { display:flex; align-items:center; gap:10px; margin: 0 0 14px; font-size:18px; font-weight:800; }
+.section__bullet { width:6px; height:18px; border-radius:2px; display:inline-block; }
+.section__bullet--blue { background:#1e90ff; }
+.title { margin:0; font-size:32px; font-weight:900; }
+.date { color:#6b7280; margin-top:4px; }
+
+/* 카드 공통 */
+.card { background:#fff; border:1px solid #eaeef3; border-radius:12px; padding:16px; }
+.section--grid { display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+
+/* 체크리스트 */
+.card--todo { padding:16px 16px 12px; background: rgba(169, 199, 242, 0.09);}
+.progress { height:10px; background:#edf2f7; border-radius:999px; overflow:hidden; margin-bottom:12px; }
+.progress__bar { height:100%; background:#3b82f6; border-radius:999px; width:0; transition:width .2s ease; }
+.todo { list-style:none; margin:0; padding:0; }
+.todo__item { display:flex; align-items:center; justify-content:space-between; padding:8px 4px; }
+.todo__label { display:flex; align-items:center; gap:10px; }
+.todo__checkbox { width:16px; height:16px; }
+.todo__text { font-size:14px; }
+.todo__text.is-done { color:#94a3b8; text-decoration: line-through; }
+.todo__remove { width:24px; height:24px; border-radius:6px; border:1px solid #e2e8f0; background:#fff; cursor:pointer; }
+.todo__remove:hover { background:#f8fafc; }
+.todo__add { display:flex; align-items:center; gap:8px; margin-top:12px; }
+.todo__input { flex:1; height:36px; border:1px solid #e2e8f0; border-radius:8px; padding:0 10px; }
+.todo__addbtn { width:32px; height:32px; border-radius:8px; border:1px solid #cbd5e1; background:#eef6ff; cursor:pointer; }
+
+/* 일정 카드 */
+.card--event { display:flex; flex-direction:column; gap:10px; }
+.event { display:flex; align-items:center; gap:12px; border:1px dashed #e2e8f0; border-radius:12px; padding:12px; background:#fff; }
+.event__icon { width:40px; height:40px; border-radius:10px; background:#f1f5f9; }
+.event__icon--cart { background:#ecfeff; }
+.event__icon--steth { background:#fef3c7; }
+.event__body { flex:1; }
+.event__title { font-weight:700; font-size:15px; }
+.event__date { color:#64748b; font-size:13px; margin-top:3px; }
+.event__badge { font-size:12px; padding:6px 10px; border-radius:999px; }
+.event__badge--soft { background:#eef6ff; color:#3467ff; }
+.event__badge--danger { background:#ffe5e5; color:#d92d20; }
+
+/* 차트(플레이스홀더) */
+.card--chart {}
+.chart__header { margin-bottom:8px; }
+.chart__caption { color:#64748b; font-size:13px; }
+.text--green { color:#16a34a; }
+.chart { position:relative; height:220px; border:1px solid #eaeef3; border-radius:12px; background:#fff; overflow:hidden; }
+.chart__grid { position:absolute; inset:0; background: repeating-linear-gradient(to right, transparent, transparent 49px, #f3f4f6 50px), repeating-linear-gradient(to bottom, transparent, transparent 49px, #f3f4f6 50px); opacity:.6; }
+.chart__line { position:absolute; left:0; right:0; top:50%; height:2px; background:linear-gradient(90deg,#3b82f6,#60a5fa); transform:translateY(-20px); border-radius:2px; }
+
+/* 음식 가이드 */
+.food-guide { display:grid; grid-template-columns: 1fr; gap:24px; }
+.food-group__title { margin:8px 0 12px; font-size:18px; font-weight:800; }
+.food-group__title--ok { color:#0a7d45; }
+.food-group__title--no { color:#cf1f1f; }
+.food-grid { display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+.food-card { border:1px solid #eaeef3; border-radius:12px; padding:16px; position:relative; background:#fff; }
+.food-card--ok { background:#edfdf3; border-color:#d7f1df; }
+.food-card--no { background:#fff1f1; border-color:#ffd8d8; }
+.food-card__name { font-weight:700; margin-bottom:6px; }
+.food-card__note { color:#64748b; font-size:13px; }
+.badge { position:absolute; right:12px; bottom:12px; padding:6px 10px; border-radius:999px; font-size:12px; }
+.badge--ok { background:#daf7e6; color:#0a7d45; }
+.badge--no { background:#ffdede; color:#c81e1e; }
+
+/* 푸터 */
+.footer { background:#e7f5f9; border-top:1px solid #fff; margin-top:auto; }
+.footer__inner { max-width:1200px; margin:0 auto; padding:20px 24px; }
+.footer__brand { display:flex; align-items:center; gap:10px; margin-bottom:12px; }
+.footer__logo { font-weight:900; font-size:28px; letter-spacing:.5px; }
+.footer__grid { display:grid; grid-template-columns: repeat(6, 1fr); gap:12px; }
+.footer__col { text-align:center; }
+.footer__role { color:#64748b; font-size:12px; }
+.footer__name { font-weight:700; font-size:13px; }
+.footer__col--stack .footer__stack { font-weight:700; }
+
+/* 반응형 */
+@media (max-width: 960px) {
+  .section--grid { grid-template-columns: 1fr; }
+  .food-grid { grid-template-columns: 1fr; }
+  .footer__grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 560px) {
+  .header__inner { flex-wrap:wrap; }
+  .nav { gap:12px; }
+  .footer__grid { grid-template-columns: repeat(2, 1fr); }
+}
