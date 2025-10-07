@@ -6,6 +6,11 @@ import githubpic from './img/github.png';
 import reactpic from './img/react.png';
 import djangopic from './img/django.png';
 import trash from './img/Trash.png';
+import bell from './img/bell.png';
+import chat from './img/chat.png';
+import circle from './img/circle.png';
+import plusicon from './img/plusicon.png';
+
 
 export default function Dashboard() {
   // 오늘 날짜
@@ -14,6 +19,9 @@ export default function Dashboard() {
     const week = ["일", "월", "화", "수", "목", "금", "토"][d.getDay()];
     return `${d.getFullYear()}년 ${d.getMonth() + 1}월 ${d.getDate()}일 ${week}요일`;
   }, []);
+
+  const [showBellPopup, setShowBellPopup] = useState(false);
+  const [showChatPopup, setShowChatPopup] = useState(false);
 
   // 할 일
   const [tasks, setTasks] = useState([
@@ -42,6 +50,7 @@ export default function Dashboard() {
     setNewTask("");
   };
 
+  
   return (
     <div className="app">
       {/* 헤더 */}
@@ -59,9 +68,44 @@ export default function Dashboard() {
             <a href="#calendar">캘린더</a>
             <a href="#community">커뮤니티</a>
           </nav>
-          <nav className="menulink">
-            <a href="/signup">회원가입</a>
-            <a href="/signin">로그인</a>
+          <nav className="menuicon">
+            {/* 알림 버튼 */}
+            <div className="icon-wrapper">
+              <button
+                className="icon-btn"
+                onClick={() => {
+                  setShowBellPopup(!showBellPopup);
+                  setShowChatPopup(false); // 다른 팝업 닫기
+                }}
+              >
+                <img src={bell} alt="알림 아이콘" className="icon" />
+              </button>
+
+              {showBellPopup && (
+                <div className="popup">
+                  <p>📢 새 알림이 없습니다.</p>
+                </div>
+              )}
+            </div>
+
+            {/* 채팅 버튼 */}
+            <div className="icon-wrapper">
+              <button
+                className="icon-btn"
+                onClick={() => {
+                  setShowChatPopup(!showChatPopup);
+                  setShowBellPopup(false); // 다른 팝업 닫기
+                }}
+              >
+                <img src={chat} alt="채팅 아이콘" className="icon" />
+              </button>
+
+              {showChatPopup && (
+                <div className="popup">
+                  <p>💬 새로운 메시지가 없습니다.</p>
+                </div>
+              )}
+            </div>
           </nav>
         </div>
       </header>
@@ -82,6 +126,7 @@ export default function Dashboard() {
           </h2>
 
           <div className="card card--todo">
+            <div className="todolist">오늘 할 일</div>
             <div className="progress">
               <div className="progress__bar" style={{ width: `${progress}%` }} />
             </div>
@@ -101,10 +146,12 @@ export default function Dashboard() {
                   <button
                     className="todo__remove"
                     onClick={() => removeTask(t.id)}
-                    img={trash}
                     aria-label="삭제"
                     title="삭제"
-                  />
+                    style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+                  >
+                    <img src={trash} alt="삭제 아이콘" width="20" height="20" />
+                  </button>
                 </li>
               ))}
             </ul>
@@ -117,12 +164,15 @@ export default function Dashboard() {
                 onChange={(e) => setNewTask(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && addTask()}
               />
-              <button className="todo__addbtn" onClick={addTask} aria-label="추가" />
+              <button className="todo__addbtn" onClick={addTask} aria-label="추가">
+                <img src={circle} alt="버튼 배경" className="circle" />
+                <img src={plusicon} alt="추가 아이콘" className="plus" />
+              </button>
             </div>
           </div>
         </section>
 
-        {/* 일정 & 체중 추세 */}
+        {/* 일정 & 체중 추세 일정 가져오는 방법을 몰라서 일단 일정 두 개만 직접 넣음*/}  
         <section className="section section--grid">
           <div className="card card--event">
             <div className="event">

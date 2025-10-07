@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './signin.css';
+import './Signin.css';
 
 function Signin() {
   const [form, setForm] = useState({ id: '', password: '' });
@@ -14,7 +14,7 @@ function Signin() {
     e.preventDefault();
 
     try {
-      const res = await axios.post('/api/auth/signin', {
+      const res = await axios.post('/api/auth/Signin', {
         id: form.id,
         password: form.password,
       });
@@ -31,7 +31,7 @@ function Signin() {
     <div className="signin-container">
       <div className="main-content">
         <h1 className="logo-text">멍냥멍냥</h1>
-        <h2 className="sub-text">코쪽이들</h2>
+        <p className="sub-text">코쪽이들</p>
       </div>
 
       <div className="form-container">

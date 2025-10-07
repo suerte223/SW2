@@ -1,0 +1,245 @@
+@font-face {
+  font-family: '온글잎 공부잘하자나';
+  src: url('../src/온글잎 공부잘하자나.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.paw {
+  width: 105px;
+  height: 105px;
+}
+
+.brand-text {
+  font-family: '온글잎 공부잘하자나';
+  font-size: 100px;
+  font-weight: lighter;
+  color: #2A2929;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  letter-spacing: .2px;
+}
+
+.menu a {
+  margin-left: 28px;
+  text-decoration: none;
+  color: #6b7280;
+  font-size: 24px;
+}
+
+.menu a:hover {
+  color: #5D5D5D;
+}
+
+.menulink a {
+  margin-right: 30px;
+  margin-left: 28px;
+  text-decoration: none;
+  color: #6b7280;
+  font-size: 24px;
+}
+
+.menulink a:hover {
+  color: #5D5D5D;
+}
+
+.hero {
+  flex: 1;
+  max-width: 960px;
+  height: auto;
+  margin: 100px auto;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  text-align: center;
+  padding: 0 20px;
+}
+.title {
+  margin: 0 0 32px;
+  font-size: 60px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.subtitle {
+  margin: 0 auto 32px;
+  max-width: 640px;
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.cta {
+  width: 343px;
+  height: 74px;
+  display: inline-block;
+  padding: 16px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  background: rgba(169, 195, 230, 0.4);
+  color: #036CFF;
+  font-size: 30px;
+}
+
+.footer {
+  background: #e7f5f9;
+  border-top: 1px solid #FFFFFF;
+  margin-top: auto;
+}
+
+.footer-inner {
+  max-width: 960;
+  margin: 0 auto;
+  padding: 20px 40px;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-stack {
+  position: relative;
+  display: flex;
+  line-height: 1;
+  margin-left: 20px;
+}
+
+.wordmark {
+  position: relative;
+  z-index: 1;
+  font-weight: 900;
+  left: 65px;
+  font-size: 55px;
+  color: #000;
+  letter-spacing: .5px;
+  font-family: '온글잎 공부잘하자나', sans-serif;
+}
+
+.paw-bg {
+  position: absolute;
+  left: 0px;
+  top: -20px;
+  width: 90px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.grid .col {
+  flex: 2;
+  min-width: 100px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.grid .col h3 {
+  white-space: nowrap;
+}
+
+.github-link,
+.github-link:visited {
+  text-decoration: none;
+  color: #333;
+}
+
+.github-icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.react-icon {
+  width: 34px;
+  height: 34px;
+  margin-right: 5px;
+}
+
+.django-icon {
+  width: 34px;
+  height: 34px;
+  margin-right: 5px;
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    gap: 20px;
+  }
+  .wordmark {
+    font-size: 40px;
+  }
+  .paw-bg {
+    width: 40px;
+  }
+}
+
+@media (max-width: 960px) {
+  .nav-inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .brand-text {
+    font-size: 60px;
+  }
+  .paw {
+    width: 60px;
+    height: 60px;
+  }
+  .menu a, .menulink a {
+    font-size: 18px;
+    margin-left: 15px;
+  }
+  .menulink a {
+    margin-right: 15px;
+  }
+  .title {
+    font-size: 36px;
+  }
+  .logo-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .grid {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .grid .col {
+    min-width: 80px;
+  }
+  .col h3 {
+    font-size: 14px;
+  }
+  .col p, .col a {
+    font-size: 12px;
+  }
+}

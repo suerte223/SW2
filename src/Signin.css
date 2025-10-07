@@ -6,17 +6,17 @@
 }
 
 /* 전체 컨테이너 스타일 */
-.signup-container {
+.signin-container {
   display: flex;
   align-items: center;
   min-height: 100vh;
-  background-color: #e0f2ff; 
+  background-color: #e0f2ff; /* 연한 파란색 배경 */
   position: relative;
   overflow: hidden;
 }
 
 /* 배경의 발바닥 무늬 스타일 */
-.signup-container::before {
+.signin-container::before {
   content: "";
   position: absolute;
   top: 0;
@@ -48,20 +48,19 @@
 
 .sub-text {
   font-family: '온글잎 공부잘하자나';
-  font-size: 200px;
-  font-weight: lighter;
+  font-size: 150px;
   color: #FFFFFF;
   margin-left: 200px;
 }
 
 /* 오른쪽 회원가입 폼 컨테이너 */
-.form-container {
+.signin-container .form-container {
   background-color: rgba(255,255,255,0.88);
   padding: 40px;
   border-radius: 11px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   max-width: 532px;
-  height: 579px;
+  height: 467px;
   width: 100%;
   z-index: 1;
   margin-left: 80px;
@@ -71,6 +70,11 @@
   font-size: 24px;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+.form {
   margin-bottom: 30px;
   margin-top: 50px;
 }
@@ -107,10 +111,11 @@
 
 /* Sign In 버튼 스타일 */
 .sign-in-button {
+  margin-left: 32px;
   width: 387px;
   height: 55px;
   padding: 12px;
-  background-color: #A9C7F2; 
+  background-color: #A9C7F2; /* 버튼 색상 */
   color: #fff;
   font-size: 24px;
   font-weight: bold;
@@ -141,4 +146,24 @@
   src: url('../src/온글잎 공부잘하자나.ttf') format('truetype'); /* 폰트 파일 경로 지정 */
   font-weight: normal; /* 폰트 굵기 */
   font-style: normal; /* 폰트 스타일 */
+}
+
+.signup-link {
+  text-align: right;
+  margin-top: 15px;
+  margin-right: 30px;
+}
+
+.signup-link a {
+  font-size: 15px;
+  color: #588EDD; 
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.signup-link a:hover {
+  color: #2563eb; 
+  text-decoration: underline;
+  text-decoration: none; /* 마우스를 가져다놔도 밑줄 생기지 않음 */
 }
