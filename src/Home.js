@@ -1,5 +1,5 @@
 import React from 'react';
-import './home.css';
+import './Home.css';
 import logoBlue from './img/logo_blue.png';
 import logoGray from './img/logo_gray.png';
 import githubpic from './img/github.png';
@@ -44,63 +44,64 @@ export default function Home() {
       {/* 푸터 */}
       <footer className="footer">
         <div className="footer-inner">
-          <div className="logo-row">
-            {/* 뒤에 깔리는 발바닥은 회색 로고 */}
+            <div className="logo-row">
+
             <div className="logo-stack">
-              <img src={logoGray} alt="" className="paw-bg" aria-hidden />
-              <span className="wordmark">KoJJOK</span>
+                <img src={logoGray} alt="" className="paw-bg" aria-hidden />
+                <span className="wordmark">KoJJOK</span>
             </div>
             <div className="grid">
                 <div className="col">
-                    <h3>Hyeona Kim</h3>
-                    <p>UI/UX Design</p>
-                    <a href="https://github.com/suerte223" target="_blank" rel="noopener noreferrer" style = {{textDecoration: "none", color: "#333"}}>
-                      <img src={githubpic} alt="GitHub Logo" className="github-icon" />
-                      ouskk
-                    </a>
+                <h3>Hyeona Kim</h3>
+                <p>UI/UX Design</p>
+                <a href="https://github.com/ouskxk" className="github-link">
+                    <img src={githubpic} alt="GitHub Logo" className="github-icon" />
+                    ouskxk
+                </a>
                 </div>
                 <div className="col">
                     <h3>Jiun Ko</h3>
                     <p>Front-End Dev</p>
-                    <a href="https://github.com/suerte223" target="_blank" rel="noopener noreferrer" style = {{textDecoration: "none", color: "#333"}}>
-                      <img src={githubpic} alt="GitHub Logo" className="github-icon" />
-                      suerte223
+                    <a href="https://github.com/suerte223" className="github-link">
+                        <img src={githubpic} alt="GitHub Logo" className="github-icon" />
+                        suerte223
                     </a>
                 </div>
                 <div className="col">
                     <h3>Seungbeom Han</h3>
                     <p>Front-End Dev</p>
-                    <a href="https://github.com/suerte223" target="_blank" rel="noopener noreferrer" style = {{textDecoration: "none", color: "#333"}}>
-                      <img src={githubpic} alt="GitHub Logo" className="github-icon" />
-                      hsb9838
+                    <a href="https://github.com/hsb9838" className="github-link">
+                        <img src={githubpic} alt="GitHub Logo" className="github-icon" />
+                        hsb9838
                     </a>
                 </div>
                 <div className="col">
                     <h3>Munjin Yang</h3>
                     <p>Back-End Dev</p>
-                    <a href= "https://github.com/munjun0608" target="_blank" rel="noopener noreferrer" style = {{textDecoration: "none", color: "#333"}}>
-                      <img src={githubpic} alt="GitHub Logo" className="github-icon" />
-                      munjun0608
+                    <a href="https://github.com/munjun0608" className="github-link">
+                        <img src={githubpic} alt="GitHub Logo" className="github-icon" />
+                        munjun0608
                     </a>
                 </div>
                 <div className="col">
                     <h3>Youngbin Kang</h3>
                     <p>Back-End Dev</p>
-                    <a href="https://github.com/suerte223" target="_blank" rel="noopener noreferrer" style = {{textDecoration: "none", color: "#333"}}>
-                      <img src={githubpic} alt="GitHub Logo" className="github-icon" />
-                      0bini
+                    <a href="https://github.com/0bini" className="github-link">
+                        <img src={githubpic} alt="GitHub Logo" className="github-icon" />
+                        0bini
                     </a>
                 </div>
-                <div className="col">
-                    <h3>TECH STACK</h3>
-                     <img src={reactpic} alt="React Logo" className="react-icon" />
-                     <img src={djangopic} alt="Django Logo" className="django
-                     -icon" />
-                </div>
             </div>
-          </div>
+
+            {/* 그룹 3: 기술 스택 */}
+            <div className="tech-stack">
+                <h3>TECH STACK</h3>
+                <img src={reactpic} alt="React Logo" className="react-icon" />
+                <img src={djangopic} alt="Django Logo" className="django-icon" />
+            </div>
+            </div>
         </div>
-      </footer>
+        </footer>
     </div>
   );
 }
