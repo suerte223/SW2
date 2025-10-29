@@ -76,7 +76,7 @@
   text-align: center;
   padding: 0 20px;
 }
-.title {
+.home .title {
   margin: 0 0 32px;
   font-size: 60px;
   line-height: 1.2;
@@ -86,9 +86,10 @@
 
 .subtitle {
   margin: 0 auto 32px;
-  max-width: 640px;
+  width: 640px;
+  height: 24px;
   color: var(--muted);
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .cta {
@@ -104,12 +105,14 @@
 }
 
 .footer {
-  background: #e7f5f9;
+  background: #fff;
   border-top: 1px solid #FFFFFF;
   margin-top: auto;
 }
 
 .footer-inner {
+  background: #fff;
+  border-top: 1px solid #FFFFFF;
   max-width: 960;
   margin: 0 auto;
   padding: 20px 40px;
@@ -223,7 +226,7 @@
     margin-right: 15px;
   }
   .title {
-    font-size: 36px;
+    font-size: 60px;
   }
   .logo-row {
     flex-direction: column;
