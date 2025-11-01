@@ -94,6 +94,7 @@ export default function NewFamily() {
         <p id="information">기본 정보를 입력해주세요.</p>
 
         <form className="newfamily-form" onSubmit={handleSubmit}>
+          
           {/* 프로필 업로드 */}
           <div className="profile-upload">
             <label htmlFor="profileInput" className="profile-pic">
