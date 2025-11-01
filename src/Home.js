@@ -6,6 +6,7 @@ import githubpic from './img/github.png';
 import reactpic from './img/react.png';
 import djangopic from './img/django.png';
 
+
 export default function Home() {
   return (
     <div className="home">
@@ -19,7 +20,7 @@ export default function Home() {
           </div>
 
           <nav className="menu">
-            <a href="#activity">활동</a>
+            <a href="/activity">활동</a>
             <a href="#health">건강</a>
             <a href="#calendar">캘린더</a>
             <a href="#community">커뮤니티</a>
