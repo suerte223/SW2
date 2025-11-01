@@ -38,7 +38,7 @@ export default function Home() {
         <p className="subtitle">
           AI와 함께 매일의 식단, 활동, 건강을 체계적으로 기록하고 관리해보세요.
         </p>
-        <a className="cta" href="/Signin">지금 시작하기</a>
+        <a className="cta" href="/signup">지금 시작하기</a>
       </main>
 
 <footer className="footer">

@@ -18,7 +18,7 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('/api/auth/signup', formData);
+      const res = await axios.post('/api/auth/Signup', formData);
       console.log('회원가입 성공:', res.data);
       alert('회원가입이 성공적으로 완료되었습니다!');
       setFormData({ id: '', password: '', email: '', nickname: '' });
@@ -27,11 +27,12 @@ function Signup() {
     }
   };
 
+
   return (
     <div className="signup-container">
       <div className="main-content">
         <h1 className="logo-text">멍냥멍냥</h1>
-        <h2 className="sub-text">코쪽이들</h2>
+        <p className="sub-text">코쪽이들</p>
       </div>
       <div className="form-container">
         <h2 className="form-title">회원가입</h2>

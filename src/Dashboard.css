@@ -54,47 +54,129 @@ body { margin: 0; background: #fff; color: #0f172a; font-family: system-ui, -app
   color: #5D5D5D;
 }
 
-.menulink a {
-  margin-right: 30px;
-  margin-left: 28px;
-  text-decoration: none;
-  color: #6b7280;
-  font-size: 24px;
+.menuicon {
+  display: flex;
+  gap: 12px;
+  position: relative;
 }
 
-.menulink a:hover {
-  color: #5D5D5D;
+.icon-wrapper {
+  position: relative;
+}
+
+/* 버튼 스타일 제거 (누르는 느낌 X) */
+.icon-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.icon-btn:active {
+  transform: scale(0.95);
+}
+
+/* 아이콘 크기 조절 */
+.icon {
+  width: 26px;
+  height: 26px;
+}
+
+/* 팝업창 스타일 */
+.popup {
+  position: absolute;
+  top: 36px; /* 아이콘 아래에 뜨게 */
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #333;
+  min-width: 150px;
+  z-index: 10;
+  animation: fadeIn 0.2s ease;
+}
+
+/* 부드러운 등장 애니메이션 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
 /* 공통 섹션 */
-.section { max-width:1200px; margin:0 auto; padding:24px; }
-.section--intro { padding-top:32px; }
-.section__title { display:flex; align-items:center; gap:10px; margin: 0 0 14px; font-size:18px; font-weight:800; }
-.section__bullet { width:6px; height:18px; border-radius:2px; display:inline-block; }
+.section { max-width:1200px; margin:50px; padding:24px; }
+.section--intro { padding-top:32px; margin-left: 50px;}
+.section__title { display:flex; align-items:center; gap:10px; margin: 0 0 45px; font-size:35px; font-weight:800; }
+.section__bullet { width:12px; height:36px; border-radius:10px; display:inline-block; }
 .section__bullet--blue { background:#1e90ff; }
-.title { margin:0; font-size:32px; font-weight:900; }
-.date { color:#6b7280; margin-top:4px; }
+.todolist{
+  font-size: 35px;
+  font-weight: 800;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-left: 20px; 
+  margin-right: 20px;
+}
+.title { margin:0; font-size:50px; font-weight:900; }
+.date { color:#6b7280; margin-top:4px; font-size: 20px;}
 
 /* 카드 공통 */
 .card { background:#fff; border:1px solid #eaeef3; border-radius:12px; padding:16px; }
 .section--grid { display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
 
 /* 체크리스트 */
-.card--todo { padding:16px 16px 12px; background: rgba(169, 199, 242, 0.09);}
-.progress { height:10px; background:#edf2f7; border-radius:999px; overflow:hidden; margin-bottom:12px; }
+.card--todo { padding:16px 16px 12px; background: rgba(169, 199, 242, 0.09); width: 1272px; height: 459px;}
+.progress { height:10px; background:#edf2f7; border-radius:999px; overflow:hidden; margin-top: 20px; margin-bottom:20px; margin-left: 40px; margin-right: 40px; }
 .progress__bar { height:100%; background:#3b82f6; border-radius:999px; width:0; transition:width .2s ease; }
 .todo { list-style:none; margin:0; padding:0; }
-.todo__item { display:flex; align-items:center; justify-content:space-between; padding:8px 4px; }
+.todo__item { display:flex; align-items:center; justify-content:space-between; padding:8px 4px; margin-top: 10px; margin-left: 40px; margin-right: 40px; }
 .todo__label { display:flex; align-items:center; gap:10px; }
 .todo__checkbox { width:16px; height:16px; }
 .todo__text { font-size:14px; }
 .todo__text.is-done { color:#94a3b8; text-decoration: line-through; }
 .todo__remove { width:24px; height:24px; border-radius:6px; border:1px solid #e2e8f0; background:#fff; cursor:pointer; }
 .todo__remove:hover { background:#f8fafc; }
-.todo__add { display:flex; align-items:center; gap:8px; margin-top:12px; }
-.todo__input { flex:1; height:36px; border:1px solid #e2e8f0; border-radius:8px; padding:0 10px; }
-.todo__addbtn { width:32px; height:32px; border-radius:8px; border:1px solid #cbd5e1; background:#eef6ff; cursor:pointer; }
+.todo__add { display:flex; align-items:center; gap:8px; margin-top:30px; margin-left: 40px; margin-right: 40px;}
+.todo__input { flex:1; height:36px; border:1px solid #e2e8f0; border-radius:8px; padding:0 10px; background: rgba(169, 199, 242, 0.09); }
+.todo__addbtn {
+  position: relative;
+  width: 30px;    
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.todo__addbtn img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease;
+}
+
+.todo__addbtn .plus {
+  width: 40%;
+  height: 40%;
+  top: 30%;
+  left: 30%;
+}
+
+.todo__addbtn:active img {
+  transform: scale(0.95);
+}
 
 /* 일정 카드 */
 .card--event { display:flex; flex-direction:column; gap:10px; }
