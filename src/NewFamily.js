@@ -24,7 +24,7 @@ export default function NewFamily() {
 
   const [profileImage, setProfileImage] = useState(null);
 
-  // ✅ 입력값 변경
+  // 입력값 변경
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
@@ -36,7 +36,7 @@ export default function NewFamily() {
     }
   };
 
-  // ✅ 프로필 이미지 업로드
+  // 프로필 이미지 업로드
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -48,21 +48,21 @@ export default function NewFamily() {
     }
   };
 
-  // ✅ 완료 버튼 클릭 시
+  // 완료 버튼 클릭 시
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // ⚠️ 기본정보 4개 확인
+    // 기본정보 4개 확인
     if (!form.name || !form.type || !form.breed || !form.birth) {
-      alert("⚠️ 기본 정보를 모두 입력해주세요!");
+      alert("기본 정보를 모두 입력해주세요!");
       return;
     }
 
     console.log("입력된 데이터:", form);
     console.log("업로드된 이미지:", profileImage);
 
-    // 🎉 등록 완료 알림
-    alert("🎉 등록이 완료되었습니다!");
+    // 등록 완료 알림
+    alert("등록이 완료되었습니다!");
     navigate("/dashboard");
   };
 
@@ -94,7 +94,7 @@ export default function NewFamily() {
         <p id="information">기본 정보를 입력해주세요.</p>
 
         <form className="newfamily-form" onSubmit={handleSubmit}>
-          
+
           {/* 프로필 업로드 */}
           <div className="profile-upload">
             <label htmlFor="profileInput" className="profile-pic">
