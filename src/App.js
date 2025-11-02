@@ -3,7 +3,8 @@ import Home from './Home';
 import Signin from './Signin';
 import Signup from './Signup';
 import Dashboard from './Dashboard';
-import NewFamily from './NewFamily';
+import NewFamily from './NewFamily'
+import Activity from './Activity';
 
 export default function App(){
   return (
@@ -14,6 +15,7 @@ export default function App(){
         <Route path="/Signup" element={<Signup />} />
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/NewFamily" element={<NewFamily />} />
+        <Route path="/activity" element={<Activity />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
