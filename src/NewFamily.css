@@ -1,3 +1,4 @@
+/* 폼 컨테이너 */
 .newfamily-form-container {
   max-width: 800px;
   margin: 0 auto;
@@ -5,9 +6,11 @@
 }
 
 #information {
-  margin-top:20px;
+  margin-top: 20px;
 }
 
+
+/* 전체 폼 구성 */
 /* --- 전체 폼 --- */
 .newfamily-form {
   display: flex;
@@ -15,13 +18,14 @@
   gap: 50px;
 }
 
-/* --- 프로필 업로드 --- */
+/* --- 프로필 업로드 영역 --- */
 .profile-upload {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
 }
 
+/* 프로필 사진 원형 영역 */
 .profile-pic {
   width: 120px;
   height: 120px;
@@ -36,7 +40,8 @@
   border: none;
 }
 
-/* --- 섹션 제목 (파란색 라인 포함) --- */
+
+/* 섹션1 */
 .info-section h2 {
   display: flex;
   align-items: center;
@@ -56,7 +61,9 @@
   border-radius: 3px;
 }
 
-/* --- 각 섹션 내부 구조 (2열) --- */
+
+/* 섹션2 */ 
+
 .info-section {
   display: flex;
   flex-direction: column;
@@ -69,7 +76,8 @@
   gap: 25px 40px;
 }
 
-/* --- 입력 그룹 --- */
+
+/* 폼 */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -91,6 +99,7 @@
   font-size: 15px;
 }
 
+/* 날짜 선택기 스타일 */
 input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   filter: invert(40%) sepia(80%) saturate(200%) hue-rotate(180deg);
@@ -102,35 +111,36 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 }
 
 
-/* --- 라디오 옵션 --- */
+/* 라디오 버튼 */
 /* 라디오 버튼 크기 키우기 */
 input[type="radio"] {
   width: 25px;
   height: 25px;
-  accent-color: #4a90e2; /* 파란색 포인트 (원하는 색으로 변경 가능) */
+  accent-color: #4a90e2; /* 파란색 포인트 */
   cursor: pointer;
   margin-right: 6px;
   margin-top: 7px;
 }
 
-/* 라벨도 보기 좋게 정렬 */
+/* 라디오 라벨 정렬 */
 .radio-options label {
   display: flex;
-  align-items: center;  
+  align-items: center;
   gap: 8px;
   font-size: 16px;
   color: #333;
   cursor: pointer;
 }
 
-/* 전체 라디오 그룹 간격 */
+/* 라디오 그룹 간격 */
 .radio-options {
   display: flex;
   gap: 30px;
   align-items: center;
 }
 
-/* --- 제출 영역 --- */
+
+/* 제출 */
 .submit-container {
   display: flex;
   justify-content: space-between;
@@ -160,7 +170,8 @@ input[type="radio"] {
   background-color: #0056b3;
 }
 
-/* --- 반응형 --- */
+
+/* 반응형 */
 @media (max-width: 768px) {
   .section-grid {
     grid-template-columns: 1fr; /* 모바일에서는 한 줄 */
@@ -176,187 +187,46 @@ input[type="radio"] {
   }
 }
 
-.newfamily-form-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
+
+/* 기타 */
+* {
+  font-family: 'Roboto', sans-serif;
 }
 
-/* --- 전체 폼 --- */
-.newfamily-form {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
+#h2 {
+  font-size: 25px;
 }
 
-/* --- 프로필 업로드 --- */
-.profile-upload {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-
-.profile-pic {
-  width: 120px;
-  height: 120px;
-  background-color: #f3f4f6;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 36px;
-  color: #007bff;
-  cursor: pointer;
-  border: none;
-}
-
-/* --- 섹션 제목 (파란색 라인 포함) --- */
-.info-section h2 {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+label.size {
   font-size: 20px;
-  font-weight: 600;
-  color: #111;
-  margin-bottom: 20px;
+  font-weight: 700;
+  color: #222;
 }
 
-.info-section h2::before {
-  content: "";
-  display: inline-block;
-  width: 5px;
-  height: 22px;
-  background-color: #007bff;
-  border-radius: 3px;
-}
-
-/* --- 각 섹션 내부 구조 (2열) --- */
-.info-section {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.section-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* 왼쪽/오른쪽 */
-  gap: 25px 40px;
-}
-
-/* --- 입력 그룹 --- */
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.form-group label {
-  font-size: 15px;
-  font-weight: 500;
-  color: #333;
-}
-
-.form-group input[type="text"],
-.form-group input[type="number"],
-.form-group input[type="date"] {
+/* 노트 입력 영역 */
+#notes {
+  width: 760px;
+  height: 30px;
   padding: 10px 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 15px;
 }
 
-/* --- 라디오 옵션 --- */
-.radio-options {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-
-.radio-options label {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-/* --- 제출 영역 --- */
-.submit-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 40px;
-}
-
-.add-pet-link {
-  color: #f00;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.submit-btn {
-  padding: 10px 22px;
-  border: none;
-  border-radius: 6px;
-  background-color: #007bff;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.submit-btn:hover {
-  background-color: #0056b3;
-}
-
-/* --- 반응형 --- */
-@media (max-width: 768px) {
-  .section-grid {
-    grid-template-columns: 1fr; /* 모바일에서는 한 줄 */
-  }
-
-  .submit-container {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .newfamily-form-container {
-    padding: 20px;
-  }
-}
-* {
-  font-family: 'Roboto', sans-serif;
-}
-#h2 {
-  font-size: 25px;
-}
-label.size {
-  font-size: 20px; /* 🔹 기본보다 살짝 크게 */
-  font-weight: 700;
-  color: #222;
-}
-#notes{
-  width : 760px;
-  height : 30px;
-  padding: 10px 12px;   
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 15px;
-
-}
 textarea#notes {
   width: 100%;
-  min-height: 50px; /* 기본 높이 */
+  min-height: 50px;
   max-width: 760px;
-  padding: 12px 14px; /* 글씨와 박스 사이 간격 */
+  padding: 12px 14px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 15px;
   line-height: 1.5;
-  resize: none; /* 사용자가 직접 드래그해서 크기 조정 못 하게 */
-  overflow: hidden; /* 자동 높이 조절 시 스크롤바 안 뜨게 */
+  resize: none;
+  overflow: hidden;
 }
 
+/* 프로필 업로드 */
 .profile-upload {
   display: flex;
   justify-content: center;
@@ -389,4 +259,54 @@ textarea#notes {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* 푸터 */
+.footer {
+  background: #e7f5f9;
+  border-top: 1px solid #fff;
+  margin-top: auto;
+}
+
+.footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px;
+}
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.footer__logo {
+  font-weight: 900;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+.footer__col {
+  text-align: center;
+}
+
+.footer__role {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.footer__name {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.footer__col--stack .footer__stack {
+  font-weight: 700;
 }
